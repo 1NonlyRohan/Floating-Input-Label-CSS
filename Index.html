@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Floating Label Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Math;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: rgb(8, 27, 36);
+        }
+
+        .input-group {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: aqua;
+            padding: 0 5px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .input-group input {
+            width: 360px;
+            height: 60px;
+            font-size: 18px;
+            color: aqua;
+            padding: 0 15px;
+            background: transparent;
+            border: 1.5px solid royalblue;
+            outline: none;
+            border-radius: 5px;
+            box-shadow: 0px 10px 10px -5px #0dc8e3;
+        }
+
+        .input-group input:focus~label,
+        .input-group input:valid~label {
+            top: 0;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 3px;
+            background: rgb(21, 21, 36);
+            transition: 0.3s ease-in-out;
+            color: aqua;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            padding: 5px;
+            cursor: pointer;
+            background-color: rgba(0, 255, 255, 0.678);
+            border: 1px solid aqua;
+            border-radius: 3px;
+        }
+
+        .submit {
+            width: 120px;
+        }
+
+        .reset {
+            width: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <h1 style="color: aqua;">
+            Creating Floating label:
+        </h1>
+    </header>
+    <form action="#" class="form-control">
+        <div class="input-group">
+            <input type="email" required>
+            <label for="">E-mail:</label>
+        </div>
+        <div class="input-group">
+            <input type="password" required>
+            <label for="">Password:</label>
+        </div>
+        <div class="btns">
+            <button type="submit" class="submit">SUBMIT</button>
+            <button type="reset" class="reset">RESET</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
